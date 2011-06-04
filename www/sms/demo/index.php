@@ -28,10 +28,13 @@ switch($action) {
 
 function formatMsg($data) {
     foreach($data as $route => $mins) {
-	    $msg .=  'Line: ' . $route . " in ";
+	    $msg .=  'Line ' . $route . " in ";
 	    foreach($mins as $min) { $msg .= $min."mins "; };
 	    $msg .= " / ";
     }
+
+    $msg = substr($msg, 0, -2)
+
     return $msg;
 }
 
