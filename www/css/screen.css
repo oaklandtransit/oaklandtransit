@@ -1,0 +1,111 @@
+/* YUI CSS Reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+	margin:0;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img { 
+	border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol,ul {
+	list-style:none;
+}
+caption,th {
+	text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,q:after {
+	content:'';
+}
+abbr,acronym { border:0;
+}
+/* End YUI CSS Reset */
+ 
+p, h1, h2, li, div, span { 
+	font-family: Arial, Helvetica, sans-serif; 
+	line-height: 1.35em;
+}
+
+h1 {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 18px;
+	font-weight: bold;	
+}
+
+p, li, tr, td {
+	font-size: 14px;
+}
+
+a {
+	color: #0038A9;
+}
+
+a:visited {
+	color: #6f96C6;
+}
+
+#outerBorder {
+	border: 1px solid #565656;
+	width: 800px;
+	margin: 20px auto 10px auto;
+}
+
+#innerContent {
+	padding: 10px;
+}
+
+#copyright {
+	text-align: center;
+}
+
+h1#mainHeader {
+	width: 100%;
+	background-color: #565656;
+	color: #ffffff;
+	text-align: center;
+	padding: 10px 0px;
+}
+
+h2 {
+	background-color: #e3e3e3;
+	margin-top: 30px;
+	margin-right: -10px;
+	margin-left: -10px;
+	margin-bottom: 6px;
+	padding: 4px 10px;
+}
+
+.warning {
+	color: #ff0000;
+	font-weight: bold;
+}
+
+#dataviewer ul {
+	margin-left: 1em;
+}
+
+#dataviewer li {
+	list-style: square;
+}
+
+.datadisplay td {
+	padding: 4px 12px;
+}
+
+.datadisplay .key {
+	background-color: #dedede;
+}
