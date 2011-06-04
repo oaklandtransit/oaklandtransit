@@ -42,12 +42,12 @@ h1 {
 }
 
 h2 {
-	font-size: 18px;
+	font-size: 24px;
 	font-weight: bold;	
 }
 
-p, li, tr, td {
-	font-size: 14px;
+p, li, tr, td, input, select {
+	font-size: 20px;
 }
 
 a {
