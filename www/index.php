@@ -22,6 +22,10 @@ if (!is_null($agency) && is_numeric($stop)) {
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+        <meta name="viewport" content="user-scalable=yes, width=device-width" />
+        <link rel="stylesheet" type="text/css" href="android.css" media="only screen and (max-width: 480px)" />
+        <link rel="stylesheet" type="text/css" href="desktop.css" media="all and (min-width: 481px)" />
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>BettaSTOP</title>
 <link rel="stylesheet" type="text/css" media="screen" href="/css/screen.css" />
