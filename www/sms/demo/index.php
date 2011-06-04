@@ -1,9 +1,9 @@
 <?php
-error_reporting(0);
+error_reporting(E_ALL);
 
 include "../../lib/RealtimeData.php";
 
-$_REQUEST['Body'] = ' #56329 hello ';
+$_REQUEST['Body'] = ' #51099 hello ';
 
 $body = trim($_REQUEST['Body']);
 preg_match("/[0-9]{5}/", $body, $matches);
@@ -27,7 +27,7 @@ switch($action) {
 }
 
 function formatMsg($data) {
-    foreach($data as $route=>$mins) {
+    foreach($data as $route => $mins) {
 	    $msg .= $route . " ";
 	    foreach($mins as $min) { $msg .= $min."mins "; };
 	    $msg .= " / ";
