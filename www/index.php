@@ -4,14 +4,18 @@
 
 include_once('lib/RealtimeData.php');
 
-$agency = $_REQUEST['agency'];
-$stop = $_REQUEST['stop'];
-$line = $_REQUEST['line'];
+$agency = isset($_REQUEST['agency']) ? $_REQUEST['agency'] : null;
+$stop = isset($_REQUEST['stop']) ? $_REQUEST['stop'] : null;
+$line = isset($_REQUEST['line']) ? $_REQUEST['line'] : null;
 if(empty($line))
 	$line = null;
 
-$RT = new RealtimeData();
-$realtimeData = $RT->getRealtimeArrival('actransit',$stop,$line);
+if (!is_null($agency) && is_numeric($stop)) {
+	$RT = new RealtimeData();
+	$realtimeData = $RT->getRealtimeArrival('actransit',$stop,$line);
+} else {
+	$realtimeData = array();
+}
 
 ?>
 
@@ -23,7 +27,6 @@ $realtimeData = $RT->getRealtimeArrival('actransit',$stop,$line);
 <link rel="stylesheet" type="text/css" media="screen" href="/css/screen.css" />
 </head>
 <body>
-    
 
 <div id="outerBorder">
 	<h1 id="mainHeader">BettaSTOP</h1>
@@ -34,26 +37,29 @@ $realtimeData = $RT->getRealtimeArrival('actransit',$stop,$line);
 			<select name="agency" id="agency">
 		    <option value="actransit">AC Transit</option>
 		    <option value="sf-muni">SF Muni</option>
-			</select>
-			Stop: <input type="text" name="stop" id="stop" value="<?= $_REQUEST['stop'] ?>">
-			Line: <input type="text" name="line" id="line" value="<?= $_REQUEST['line'] ?>">
+			</select><br />
+			Stop: <input class="datainput" type="text" name="stop" id="stop" value="<?= $stop ?>">
+			Line: <input class="datainput" type="text" name="line" id="line" value="<?= $line ?>">
 			<input type="submit" value="Go">
 			</form>
 		</p>
 		<hr>
 		<p>
-		Next Bus:
+		<? if (!empty($realtimeData)): ?>
 		<table>
 			<? foreach($realtimeData as $route => $minutes): ?>
 			<tr>
-				<td><?= $route ?>: </td>
-				<td> <? foreach($minutes as $min) { echo $min."mins "; } ?></td>
+				<td class="route">Line <?= $route ?> </td>
+				<td><? foreach($minutes as $min) { echo $min."m "; } ?></td>
 			</tr>
 			<? endforeach; ?>
 		</table>
+		<? else: ?>
+		<i>No buses found within the next hour.</i>
+		<? endif; ?>
 		</p>
 	</div>
 </div>
-<div id="copyright">&copy; 2011 Oakland Transit</div>
+<div id="copyright">&copy; 2011 Oakland Transit Group</div>
 </body>
 </html>
