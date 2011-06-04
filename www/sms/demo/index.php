@@ -33,7 +33,7 @@ function formatMsg($data) {
 	    $msg .= " / ";
     }
 
-    $msg = substr($msg, 0, -2)
+    $msg = substr( trim($msg), 0, -1);
 
     return $msg;
 }
