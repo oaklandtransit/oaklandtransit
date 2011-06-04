@@ -26,14 +26,13 @@ switch($action) {
 }
 
 function formatMsg($data) {
-    var_dump( $data );
-
-    //foreach($data as $line)
-    //return $msg;
-
+    foreach($data as $route=>$mins) {
+	    $msg .= $route . " ";
+	    foreach($mins as $min) { $msg .= $min."mins "; };
+	    $msg .= " / ";
+    }
+    return $msg;
 }
-
-
 
 // now greet the sender
     header("content-type: text/xml");
