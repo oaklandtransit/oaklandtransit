@@ -1,21 +1,22 @@
 <?php
 error_reporting(0);
-//include "lib/twilio/twilio.php";
+
 include "../../lib/RealtimeData.php";
 
-$body = $_REQUEST['Body'];
+$_REQUEST['Body'] = ' #56329 hello ';
 
-$busstop = "";
+$body = trim($_REQUEST['Body']);
+preg_match("/[0-9]{5}/", $body, $matches);
 
-$busline = preg_match($body);
-
-$action = 'realtime';
+if (!empty( $matches[0] )) {
+    $action = 'realtime';
+}
 
 switch($action) {
 
     case "realtime":
         $RT     = new RealtimeData();
-        $msg    = formatMsg( $RT->getRealtimeArrival('actransit','55554') );
+        $msg    = formatMsg( $RT->getRealtimeArrival('actransit', $matches[0] ) );
         break;
 
     case "":
@@ -35,8 +36,8 @@ function formatMsg($data) {
 }
 
 // now greet the sender
-    header("content-type: text/xml");
-    echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
+header("content-type: text/xml");
+echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
 ?>
 <Response>
     <Sms><?= $msg ?></Sms>
