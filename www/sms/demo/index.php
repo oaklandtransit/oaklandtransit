@@ -1,7 +1,7 @@
 <?php
 error_reporting(0);
 //include "lib/twilio/twilio.php";
-include "../../lib/RealTimeData.php";
+include "../../lib/RealtimeData.php";
 
 $body = $_REQUEST['Body'];
 
@@ -15,8 +15,7 @@ switch($action) {
 
     case "realtime":
         $RT     = new RealtimeData();
-        $data   = $RT->getRealtimeArrival('actransit','55554'));
-        $msg    = formatData($data);
+        $msg    = formatMsg( $RT->getRealtimeArrival('actransit','55554') );
         break;
 
     case "":
@@ -26,12 +25,12 @@ switch($action) {
         $msg = "Welcome to Oakland Transit !";
 }
 
+function formatMsg($data) {
+    var_dump( $data );
 
-formatData($data) {
-    //foreach ($data as $bus => $minutes) {
-        $msg = "Line 54 in (" implode(",", $minutes) .')';
-    //}
-    return $msg;
+    //foreach($data as $line)
+    //return $msg;
+
 }
 
 
