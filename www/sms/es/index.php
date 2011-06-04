@@ -23,12 +23,12 @@ switch($action) {
         break;
 
     default:
-        $msg = "Welcome to Betta Stop !";
+        $msg = "Beinvenidos a Betta Stop !";
 }
 
 function formatMsg($data) {
     foreach($data as $route => $mins) {
-	    $msg .=  'Line ' . $route . " in ";
+	    $msg .=  'Linea ' . $route . " en ";
 	    foreach($mins as $min) { $msg .= $min."mins "; }
 	    $msg .= " / ";
     }
