@@ -7,7 +7,7 @@ $body = $_REQUEST['Body'];
 
 $busstop = "";
 
-$busline = preg_match($_REQUEST['Body']);
+$busline = preg_match($body);
 
 $action = 'realtime';
 
