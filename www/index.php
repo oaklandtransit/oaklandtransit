@@ -44,8 +44,8 @@ if (!is_null($agency) && is_numeric($stop)) {
 		    <option value="sf-muni">SF Muni</option>
 			</select></td>
 			</tr>
-			<tr><td>Stop:</td><td> <input class="datainput" type="text" name="stop" id="stop" value="<?= $stop ?>"></td></tr>
-			<tr><td>Line:</td><td> <input class="datainput" type="text" name="line" id="line" value="<?= $line ?>"></td></tr>
+			<tr><td>Stop:</td><td> <input class="datainput" type="number" name="stop" id="stop" value="<?= $stop ?>"></td></tr>
+			<tr><td>Line:</td><td> <input class="datainput" type="number" name="line" id="line" value="<?= $line ?>"></td></tr>
 			<tr><td colspan="2"><input type="submit" value="Go"></td></tr>
 			</table>
 			</form>
