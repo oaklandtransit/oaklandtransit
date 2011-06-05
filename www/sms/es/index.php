@@ -29,7 +29,7 @@ switch($action) {
 function formatMsg($data) {
     foreach($data as $route => $mins) {
 	    $msg .=  'Linea ' . $route . " en ";
-	    foreach($mins as $min) { $msg .= $min."mins "; }
+	    foreach($mins as $min) { $msg .= $min."min "; }
 	    $msg .= " / ";
     }
 
