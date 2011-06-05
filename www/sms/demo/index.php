@@ -19,9 +19,6 @@ switch($action) {
         $msg    = formatMsg( $RT->getRealtimeArrival('actransit', $matches[0] ) );
         break;
 
-    case "":
-        break;
-
     default:
         $msg = "Please enter your bus stop number #";
 }
