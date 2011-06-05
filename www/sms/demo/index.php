@@ -23,7 +23,7 @@ switch($action) {
         break;
 
     default:
-        $msg = "Welcome to Betta Stop !";
+        $msg = "Please enter your bus stop number #";
 }
 
 function formatMsg($data) {
