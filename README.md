@@ -14,7 +14,7 @@ The BettaSTOP provides the following notable features out-of-the-box:
 
 Welcome to the BettaSTOP team. Formed on June 4th, 2011 at Code for Oakland. [Code for Oakland](http://www.codeforoakland.com)
 
-BettaSTOP is in active development, it will be submitted to the FCC Apps for Good code contest.
+BettaSTOP is in active development, it will be submitted to the FCC Apps4Communities code contest.
 
 ## Links and Resources
 
