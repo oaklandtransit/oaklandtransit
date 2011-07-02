@@ -1,6 +1,6 @@
-# The Deets
+# App Purpose
 
-A lightweight read-only REST API that retrieves NextBus XML data and locally caches bus line data in JSON for use by the BettaSTOP application.
+A fast lightweight read-only REST API that retrieves NextBus XML data and locally caches bus line data in JSON for use by the BettaSTOP application.
 
 ## Data Endpoints
 
@@ -32,5 +32,5 @@ The data provided by this API is from a publically available data access API pro
 The data provided by this API is copyright either NextBus itself or the respective transit agencies.
 
 
-##
+## Attribution
 Heavily Inspired by [ProximoBus](http://proximobus.appspot.com/)
