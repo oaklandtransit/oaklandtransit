@@ -19,16 +19,24 @@ BettaSTOP is in active development, it will be submitted to the FCC Apps for Goo
 ## Links and Resources
 
 Team Members Include:
+
 * Krys Freeman, @bLaKtivist  <http://twitter.com/bLaKtivist>
+
 * Paul Richardson, @floatingdogs <http://twitter.com/floatingdogs>
+
 * Corey Takahashi
+
 * David Ordal, ordal.com <http://ordal.com>
+
 * jose d lopez, tumis.com <http://tumis.com>, @tumis <http://twitter.com/tumis>
+
 * Chris Peeples, Board - actransit.org <http://actransit.org>
+
 * Sian Morson, kollectivemobile.com  <http://kollectivemobile.com>
+
 * Jen-Mei Wu
 
-The prototype is up at [bettaSTOP]<http://bettaSTOP.net/>
+The prototype is up at [bettaSTOP](http://bettaSTOP.net/)
 
 ## Open Source License
 
