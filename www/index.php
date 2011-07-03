@@ -6,7 +6,7 @@ include_once('lib/RealtimeData.php');
 
 $agency = isset($_REQUEST['agency']) ? $_REQUEST['agency'] : null;
 $stop = isset($_REQUEST['stop']) ? $_REQUEST['stop'] : null;
-$line = isset($_REQUEST['line']) ? $_REQUEST['line'] : null;
+$line = isset($_REQUEST['line']) ? strtoupper($_REQUEST['line']) : null;
 if(empty($line))
 	$line = null;
 
@@ -23,8 +23,6 @@ if (!is_null($agency) && is_numeric($stop)) {
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="viewport" content="user-scalable=yes, width=device-width" />
-<link rel="stylesheet" type="text/css" href="android.css" media="only screen and (max-width: 480px)" />
-<link rel="stylesheet" type="text/css" href="desktop.css" media="all and (min-width: 481px)" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>BettaSTOP</title>
@@ -36,12 +34,12 @@ if (!is_null($agency) && is_numeric($stop)) {
 	<h1 id="mainHeader">BettaSTOP</h1>
 	<div id="innerContent">
 		<p>
-			<form action="<?= $_SERVER['PHP_SELF'] ?>">
+			<form action="/">
 			<table>
 			<tr><td>Agency:</td><td><input type="hidden" value="actransit">
 			<select name="agency" id="agency">
-		    <option value="actransit">AC Transit</option>
-		    <option value="sf-muni">SF Muni</option>
+		    <option value="actransit">AC Transit </option>
+		    <option value="sf-muni">SF Muni </option>
 			</select></td>
 			</tr>
 			<tr><td>Stop:</td><td> <input class="datainput" type="number" name="stop" id="stop" value="<?= $stop ?>"></td></tr>
