@@ -4,7 +4,6 @@ error_reporting(0);
 include "../../lib/RealtimeData.php";
 
 //$_REQUEST['Body'] = ' #51099 hello ';
-//$from = trim($_REQUEST['From']);
 
 $body = trim($_REQUEST['Body']);
 preg_match("/[0-9]{5}/", $body, $matches);
@@ -32,7 +31,6 @@ function formatMsg($data) {
     }
 
     $msg = substr( trim($msg), 0, -1);
-	//$msg .= $from;
 
     return $msg;
 }
