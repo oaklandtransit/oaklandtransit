@@ -41,7 +41,7 @@ function formatMsg($data) {
     }
 
     $msg = substr( trim($msg), 0, -1);
-	$msg .= $from;
+	//$msg .= $from;
 
     return $msg;
 }
