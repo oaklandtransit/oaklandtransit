@@ -15,7 +15,7 @@ include "../../lib/RealtimeData.php";
 //$_REQUEST['Body'] = ' #51099 hello ';
 
 $body = trim($_REQUEST['Body']);
-$from = trim($_REQUEST['From']);
+//$from = trim($_REQUEST['From']);
 preg_match("/[0-9]{5}/", $body, $matches);
 
 if (!empty( $matches[0] )) {
