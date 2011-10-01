@@ -6,7 +6,7 @@ include "../../lib/RealtimeData.php";
 //$_REQUEST['Body'] = ' #51099 hello ';
 
 $body = trim($_REQUEST['Body']);
-preg_match("/[0-9]{5}/", $body, $matches);
+preg_match("/^[0-9]{5}/", $body, $matches);
 
 if (!empty( $matches[0] )) {
     $action = 'realtime';

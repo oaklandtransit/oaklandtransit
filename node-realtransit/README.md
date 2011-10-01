@@ -31,6 +31,7 @@ The data provided by this API is from a publically available data access API pro
 
 The data provided by this API is copyright either NextBus itself or the respective transit agencies.
 
+AC Transit Terms and Conditions are detailed [here] (http://www.actransit.org/rider-info/nextbus-xml-data/)
 
 ## Attribution
 Heavily Inspired by [ProximoBus](http://proximobus.appspot.com/)
