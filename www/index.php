@@ -17,6 +17,31 @@ if (!is_null($agency) && is_numeric($stop)) {
 	$realtimeData = array();
 }
 
+$dbhost = "oaklandtransitsqldb.badgerbag.com";
+$username="blaktivist";
+$password="ridethebus!";
+$database="oaklandtransit";
+$connect = mysql_connect($dbhost,$username,$password);
+@mysql_select_db($database, $connect) or die( "Unable to select database");
+$sql = "SELECT * FROM feedback WHERE stopID = '$stop' ORDER BY date_time DESC";
+$result = mysql_query($sql, $connect);
+$numrows=mysql_numrows($result);
+$i=0;
+
+while ($i < $numrows) {
+	if(mysql_result($result,$i,"got_on"))
+		$gotOn[] = "Got on!";
+	else
+		$gotOn[] = "Didn't get on!";
+	$comment[] = mysql_result($result,$i,"comment");
+	$date_time[] = mysql_result($result,$i,"date_time");
+	$i++;
+}
+
+$i = 0;
+
+mysql_close();
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -61,6 +86,21 @@ if (!is_null($agency) && is_numeric($stop)) {
 		</table>
 		<? else: ?>
 		<i>No buses found within the next hour.</i>
+		<? endif; ?>
+		
+		<? if($numrows != 0): ?>
+		<table>
+			<? while($i < $numrows):?>
+			<tr>
+				<td><?= $gotOn[$i] ?></td>
+				<td><?= $comment[$i] ?></td>
+				<td><?= $date_time[$i] ?></td>
+			</tr>
+			<? $i++; ?>
+			<? endwhile; ?>
+		</table>
+		<? else: ?>
+		<i>No feedback found for this stop.</i>
 		<? endif; ?>
 		</p>
 	</div>
