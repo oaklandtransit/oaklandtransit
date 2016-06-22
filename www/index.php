@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Text "stopID" to 5108170800 - BettaSTOP</title>
+    <title>BettaSTOP - Text "stopID" to 5108170800 - BettaSTOP</title>
     <link href='http://twitter.github.com/bootstrap/assets/css/bootstrap.css' rel='stylesheet' type='text/css' />
     <link href='http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css' rel='stylesheet' type='text/css' />
     <!--<script type='text/javascript'>
@@ -24,11 +24,11 @@
               <br><br>
               Text your 5-digit AC Transit stopID to <strong>(510) 817-0800:</strong></p>
               <blockquote><strong>14th St. & Broadway:</strong> 52111
-			  <br><strong>Coliseum BART:</strong> 56777
-			  <br><strong>Oakland Airport:</strong> 50275
-			  <br><strong>8th St. & Broadway:</strong> 54222	</blockquote>
+			  <br><strong>Coliseum BART ></strong> 56777
+			  <br><strong>Oakland Airport > </strong> 50275
+			  <br><strong>8th St. & Broadway ></strong> 54222	</blockquote>
               <p>Get your bus arrival prediction, 
-              <br>then <a href="feedback.php"><strong>tell us about your experience on the bus</strong></a> all via text.
+              <br>then <a href="feedback.php"><strong>tell us about your experience on the bus</strong></a> <strong>all via text.</strong>
             </p>
             <br />
             <a class='btn btn-large btn-primary' href='#use'>Learn more</a>
@@ -249,3 +249,4 @@ mysql_close();
   
 </html>
 
+# test line
