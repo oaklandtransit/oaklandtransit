@@ -240,7 +240,7 @@ mysql_close();
         </div>
       </div>
       <footer>
-        <div id="copyright">&copy; 2011-2012 Oakland Transit Group | Team Lead by <a href="http://krysfreeman.com">Krys Freeman</a></div>
+        <div id="copyright">(2016) &copy; 2011-2012 Oakland Transit Group | Team Lead by <a href="http://krysfreeman.com">Krys Freeman</a></div>
       </footer>
       <br />
     </div>
@@ -248,4 +248,3 @@ mysql_close();
   </body>
   
 </html>
-
